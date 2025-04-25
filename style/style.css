@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'poppins', sans-serif;
+    background-color: var(--blanco);
+}
+
+:root{
+    --verde: #1DB954;
+    --negro: #191919;
+    --gris: #b2b2b2;
+    --blanco: #fff
+}
+
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.header-container .logo{
+    text-decoration: none;
+    color: var(--negro);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.header-container ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.header-container ul li a{
+    text-decoration: none;
+    color: var(--negro);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.header-container ul li a:hover{
+    color: var(--verde);
+}
+
+.header-container .acount-link{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.header-container .acount-link a{
+    text-decoration: none;
+    color: #1DB954;
+}
+
+.header-container .acount-link  .active{
+    background: var(--verde);
+    color: var(--negro);
+    padding: 4px 25px;
+    color: var(--blanco);
+    border-radius: 23px;
+}
+
+.main-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 4rem;
+    color: var(--negro);
+    margin: 20px 60px;
+}
+
+.hero-section h1{
+font-size: 5.4rem;
+color: var(--verde);
+}
+
+.main-container section img{
+  max-width: 100%;
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start; /* Esto evita que el enlace se estire al ancho completo */
+}
+
+.hero-section .text {
+    color: var(--gris);
+}
+
+.hero-section a {
+    background-color: var(--verde);
+    color: #191919;
+    padding: 10px 44px;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    white-space: nowrap;
+
+}
+
+.hero-section a:hover {
+    background-color: #1ed760;
+    transform: translateY(-2px);
+}
