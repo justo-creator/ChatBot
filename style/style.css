@@ -9,7 +9,6 @@ html{
 
 body{
     font-family: 'poppins', sans-serif;
-    background-color: var(--blanco);
 }
 
 :root{
@@ -50,18 +49,10 @@ body{
     color: var(--verde);
 }
 
-.header-container .acount-link{
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
 
-.header-container .acount-link a{
-    text-decoration: none;
-    color: #1DB954;
-}
 
-.header-container .acount-link  .active{
+
+.header-container  .active{
     background: var(--verde);
     color: var(--negro);
     padding: 4px 25px;
@@ -124,10 +115,7 @@ body{
         display: block;
     }
 
-    .acount-link {
-        display: none; /* Opcional: ocultar login/register en móviles, si quieres */
-         margin: 0px auto;
-    }
+
 
     .nav-list.active {
         display: block;
@@ -158,9 +146,14 @@ body{
 }
 
 .hero-section h1 {
-    font-size: 3.4rem;
+    font-size: 5.4rem;
     color: var(--verde);
   
+  }
+
+  .hero-section p{
+    font-family: 'outfit', sans-serif;
+    color: var(--gris);
   }
 
 
@@ -203,6 +196,7 @@ body{
     display: flex;
     flex-direction: column;
     gap: 8rem;
+    font-family: 'outfit', sans-serif;
 }
 
 .main-container .service img{
@@ -231,7 +225,7 @@ body{
     gap: 20px;
 }
 
-.service-text figcaption{
+.service-text h2{
     color: var(--verde);
     font-size: 2.2rem;
     font-weight: bold;
@@ -242,3 +236,154 @@ body{
     line-height: 2rem;
     text-align: justify;
 }
+
+
+
+
+.about-section {
+    padding: 4rem 2rem;
+    background-color: #ffffff;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .section-description {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .about-card {
+    background: #f9f9f9;
+    border-radius: 16px;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  }
+  
+  .about-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  }
+  
+  .icon-container {
+    font-size: 3rem;
+    color: #4CAF50;
+    margin-bottom: 1rem;
+  }
+  
+  .about-title {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .about-text {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+  }
+
+  
+  .footer {
+    background-color: #222;
+    color: #ddd;
+    padding: 4rem 2rem 2rem;
+    font-size: 0.9rem;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-brand {
+    flex: 1 1 300px;
+  }
+  
+  .footer-brand .footer-logo {
+    font-size: 1.8rem;
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    display: inline-block;
+  }
+  
+  .footer-brand p {
+    color: #aaa;
+    line-height: 1.6;
+  }
+  
+  .footer-links, .footer-social {
+    flex: 1 1 200px;
+  }
+  
+  .footer-links h4,
+  .footer-social h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-links ul li a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links ul li a:hover {
+    color: #4CAF50;
+  }
+  
+  .footer-social .social-icons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .footer-social a {
+    color: #aaa;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-social a:hover {
+    color: #4CAF50;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid #444;
+    color: #777;
+    font-size: 0.8rem;
+  }
+  
