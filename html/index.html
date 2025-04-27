@@ -9,7 +9,6 @@
     <meta name="author" content="Your Name">
     <meta name="theme-color" content="#4CAF50">
     <!--icon awesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8b+z4+2e5c7e5a5e5a5e5a5e5a5e5a5e5a5" crossorigin="anonymous">
     <link rel="stylesheet" href="/style/style.css">
     <title>CHatBot</title>
 </head>
@@ -17,21 +16,33 @@
 
     <header class="header-container">
         <a href="/html/index.html" class="logo" title="ChatBot">ChatBot</a>
-        <nav class="nav-list">
+
+        <button class="menu-toggle" id="menu-toggle">
+            <span></span>
+    <span></span>
+    <span></span>
+        </button>
+        
+
+        <nav class="nav-list" id="nav-list">
             <ul>
-                <li><a href="#inicio">Home</a></li>
-                <li><a href="/html/chat.html">Service</a></li>
-                <li><a href="/html/about.html">About</a></li>
-                <li><a href="/html/contact.html">Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#service">Service</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <section class="acount-link">
+                    <a href="/html/login.html" class="active">Login</a>
+                    <a href="/html/register.html">Register</a>
+                </section>
             </ul>
+
+            
+
         </nav>
-        <section class="acount-link">
-            <a href="/html/login.html" class="active">Login</a>
-            <a href="/html/register.html">Register</a>
-        </section>
+        
     </header>
 
-    <main id="inicio" class="main-container">
+    <article id="inicio" class="article-container">
         <section class="hero-section">
             <h1>Welcome to ChatBot</h1>
     
@@ -40,10 +51,35 @@
     
         </section>
         <section>
-            <img src="/html/task.png" alt="">
+            <img src="/img/task.png" alt="imagen de tareas">
+        </section>
+    </article>
+      
+
+    <main class="main-container" id="about">
+        
+        <section class="service">
+            <figure>
+                <img src="/img/productividad.png" alt="imagen de tareas">
+            </figure>
+            <div class="service-text">
+                <figcaption>Prudctividad</figcaption>
+              <p>Nuestro chatbot está cuidadosamente diseñado para mejorar significativamente su productividad, brindando respuestas rápidas, precisas y confiables a todas sus preguntas. Ya sea que busque información, resuelva un problema o explore nuevas ideas, nuestro sistema inteligente está aquí para brindarle un apoyo eficiente, ahorrándole tiempo valioso y ayudándole a concentrarse en lo que realmente importa.</p>
+            </div>
+        </section>
+
+        <section class="service">
+            <div class="service-text">
+                <figcaption>Haorra Tiempo en busquedas</figcaption>
+              <p>Nuestro chatbot está diseñado para ayudarle a ahorrar tiempo valioso, brindándole respuestas instantáneas y precisas a sus preguntas. En lugar de pasar horas buscando información, puede confiar en nuestro sistema inteligente para obtener soluciones rápidas, permitiéndole concentrarse en tareas más importantes y aumentar su productividad general.</p>
+            </div>
+            <figure>
+                <img src="/img/time.png" alt="imagen de tareas">
+            </figure>
         </section>
     </main>
 
     
+    <script src="/js/script.js"></script>
 </body>
 </html>
