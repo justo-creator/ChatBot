@@ -5,3 +5,4 @@ const toggleButton = document.getElementById('menu-toggle');
         navList.classList.toggle('active');
         toggleButton.classList.toggle('active')
     });
+

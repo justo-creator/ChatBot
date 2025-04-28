@@ -2,12 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="/style/login.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChatBot Login</title>
 </head>
 <body>
 
-    <h1>formulario</h1>
+    <form class="form-container">
+
+        <a href="/html/index.html">Go Back</a>
+
+        <h2 class="title">ChatBot</h2>
+        
+        <div class="inputs-container">
+            <label for="useremail">Email:</label>
+            <input type="email" id="useremail" name="useremail" required>
+        </div>
+
+        <div class="inputs-container">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+
+        <button type="submit" class="btn">Login</button>
+
+        <section class="links">
+            <p>Don't have an account? <a href="/html/register.html">Register</a></p>
+            <p>Forgot your password? <a href="/html/forgot_password.html">Reset Password</a></p>
+        </section>
+    </form>
     
 </body>
 </html>
