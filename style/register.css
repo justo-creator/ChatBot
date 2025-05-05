@@ -2,7 +2,6 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'poppins', sans-serif;
-    background: linear-gradient(to right, #6a11cb, #2575fc);
 }
 
 .form-container{
@@ -20,7 +19,7 @@ body{
 .form-container .title{
     text-align: center;
     font-size: 2.4rem;
-    color: #4CAF50;
+    color: #191414;
 }
 
 .inputs-container{
@@ -44,7 +43,7 @@ body{
 
 .form-container .btn{
     padding: 15px 0 ;
-    background-color: #4CAF50;
+    background-color: #191414;
     color: white;
     border: none;
     font-family: inherit;
@@ -54,7 +53,7 @@ body{
     cursor: pointer;
 }
 .form-container .btn:hover{
-    background-color: #45a049;
+    background-color: #000;
 }
 
 .inputs-container select{
