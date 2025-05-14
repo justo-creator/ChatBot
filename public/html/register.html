@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/style/register.css">
+    <title>Crea una cuenta con ChatBot</title>
+</head>
+<body>
+
+    <form class="form-container" action="/register" method="POST">
+
+        <a href="/public/html/index.html">Volver</a>
+
+        <h2 class="title">Crear cuenta ChatBot</h2>
+
+        <section class="container">
+
+        <div class="inputs-container">
+            <label for="username">Nombre Completo *</label>
+            <input type="text" id="username" name="username">
+        </div>
+
+
+        <div class="inputs-container">
+            <label for="useremail">Correo Electronico *</label>
+            <input type="email" id="useremail" name="useremail">
+        </div>
+
+
+        <div class="inputs-container">
+            <label for="password">Crear una Contraseña:</label>
+            <input type="password" id="password" name="password">
+        </div>
+
+        <div class="inputs-container">
+            <label for="confirm_password">Confirmar Contraseña *</label>
+            <input type="password" id="confirm_password" name="confirm_password">
+
+        </div>
+
+        <div class="inputs-container">
+            <label for="date">Fecha de Nacimiento *</label>
+            <input type="date" id="date" name="fecha" >
+
+        </div>
+        <!--select gender-->
+
+        <div class="inputs-container">
+            <label for="gender">Selecciona tu genero:</label>
+            <select name="gender" id="">
+                <option value="" disabled selected>Selecciona tu género</option>
+                <option value="hombre">Hombre</option>
+                <option value="mujer">Mujer</option>
+                <option value="no-binario">No binario</option>
+                <option value="transforme">Goku</option>
+                <option value="apache">Elipcoctero apache cosmico >:v</option>
+                <option value="prefiero-no-decir">Prefiero no decir</option>
+                <option value="otro">Otro</option>
+            </select>
+
+            </section>
+
+
+            <div id="error-messages" class="error-messages"></div>
+
+
+        <button type="submit" class="btn">Crear Cuenta</button>
+
+        <section class="links">
+            <p>¿Ya tienes una cuenta? <a href="/publichtml/login.html">Iniciar sesión</a></p>
+            <p>¿Olvidaste tu contraseña? <a href="/public/html/forgot_password.html">Restablecer contraseña</a></p>
+        </section>
+    </form>
+
+
+ 
+
+   <script>
+document.querySelector(".form-container").addEventListener("submit", function(e) {
+    const username = document.getElementById("username").value.trim();
+    const email = document.getElementById("useremail").value.trim();
+    const password = document.getElementById("password").value;
+    const confirmPassword = document.getElementById("confirm_password").value;
+    const birthDate = document.getElementById("date").value;
+    const gender = document.querySelector("select[name='gender']").value;
+    const errorBox = document.getElementById("error-messages");
+
+    let errores = [];
+
+    // Validaciones básicas
+    if (username === "") errores.push("El nombre de usuario es obligatorio.");
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) errores.push("El correo electrónico no es válido.");
+    if (password.length < 6) errores.push("La contraseña debe tener al menos 6 caracteres.");
+    if (password !== confirmPassword) errores.push("Las contraseñas no coinciden.");
+    if (!birthDate) {
+        errores.push("La fecha de nacimiento es obligatoria.");
+    } else {
+        const birth = new Date(birthDate);
+        const today = new Date();
+        const age = today.getFullYear() - birth.getFullYear();
+        const isOldEnough = age > 13 || (age === 13 && today >= new Date(birth.setFullYear(birth.getFullYear() + 13)));
+        if (!isOldEnough) errores.push("Debes tener al menos 13 años para registrarte.");
+    }
+    if (!gender) errores.push("Debes seleccionar un género.");
+
+    // Mostrar errores
+    if (errores.length > 0) {
+        e.preventDefault(); // Detener envío
+        const listaErrores = "<ul><li>" + errores.join("</li><li>") + "</li></ul>";
+        errorBox.innerHTML = listaErrores;
+        errorBox.classList.add("show");
+    } else {
+        errorBox.classList.remove("show");
+    }
+});
+</script>
+
+
+    
+</body>
+</html>

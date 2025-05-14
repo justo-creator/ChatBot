@@ -1,0 +1,109 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'rubik', sans-serif;
+}
+
+.form-container{
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #F9FAFB;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+
+}
+
+.form-container .title{
+    text-align: center;
+    font-size: 2rem;
+    color: #191414;
+}
+
+.inputs-container{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.inputs-container input{
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #111827;
+    font-family: inherit;
+    font-size: 16px;
+    outline: none;
+}
+
+
+.form-container .btn{
+ background: #232526;
+ color: #fff;
+ border: none;
+ padding: 15px 20px;
+ border-radius: 5px;
+ margin: 20px 0;
+ font-family: inherit;
+ cursor: pointer;
+}
+.form-container .btn:hover{
+    background-color: #000;
+}
+
+.inputs-container select{
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #111827;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.inputs-container input[type="date"] {
+    padding: 10px 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #f9f9f9;
+    outline: none;
+}
+
+.inputs-container input:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+    background-color: #fff;
+}
+
+.error-messages {
+    background-color: #ffe0e0;
+    color: #b00020;
+    border: 1px solid #ffb3b3;
+    padding: 12px;
+    margin-bottom: 16px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.error-messages.show {
+    display: block;
+    opacity: 1;
+}
+
+.error-messages ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.error-messages li {
+    margin-bottom: 4px;
+}

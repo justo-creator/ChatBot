@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    background-color: #f3f4f6;
+    color: #1f2937;
+}
+
+.form-container {
+    max-width: 480px;
+    margin: 50px auto;
+    padding: 32px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: box-shadow 0.3s ease;
+}
+
+.form-container:hover {
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.form-container .title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+.inputs-container {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.inputs-container label {
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: #374151;
+}
+
+.inputs-container input,
+.inputs-container select {
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #111827;
+    background-color: #f9fafb;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.inputs-container input:focus,
+.inputs-container select:focus {
+    border-color: #3b82f6;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+    outline: none;
+}
+
+.form-container .btn {
+    padding: 14px;
+    background-color: #111827;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-container .btn:hover {
+    background-color: #000000;
+}
+
+.error-messages {
+    background-color: #fff1f2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.error-messages.show {
+    display: block;
+    opacity: 1;
+}
+
+.error-messages ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.error-messages li {
+    margin-bottom: 6px;
+}
+
+.success-message {
+    background-color: #ecfdf5;
+    color: #065f46;
+    border: 1px solid #a7f3d0;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.success-message.show {
+    display: block;
+    opacity: 1;
+}
+
+.back-link {
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #2563eb;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.back-link:hover {
+    color: #1d4ed8;
+}

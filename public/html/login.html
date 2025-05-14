@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/public/style/login.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatBot Login</title>
+</head>
+<body>
+
+    <form class="form-container">
+
+        <a href="/public/html/index.html">Go Back</a>
+
+        <h2 class="title">Aceso para estuduantes</h2>
+        
+        <div class="inputs-container">
+            <label for="useremail">Email:</label>
+            <input type="email" id="useremail" name="useremail">
+        </div>
+
+        <div class="inputs-container">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+        </div>
+
+        <div id="login-error-messages" class="error-messages"></div>
+
+
+        <button type="submit" class="btn">Aceder</button>
+
+        <section class="links">
+            <p>¿No tienes una cuenta? <a href="/public/html/register.html">Regístrate</a></p>
+            <p>¿Olvidaste tu contraseña? <a href="/public/html/forgot_password.html">Restablecer Contraseña</a></p>
+        </section>
+    </form>
+
+
+    <script>
+document.querySelector(".form-container").addEventListener("submit", function(e) {
+    const email = document.getElementById("useremail").value.trim();
+    const password = document.getElementById("password").value;
+    const errorBox = document.getElementById("login-error-messages");
+
+    let errores = [];
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        errores.push("El correo electrónico no es válido.");
+    }
+
+    if (password.length < 6) {
+        errores.push("La contraseña debe tener al menos 6 caracteres.");
+    }
+
+    if (errores.length > 0) {
+        e.preventDefault(); // Detener envío
+        const lista = "<ul><li>" + errores.join("</li><li>") + "</li></ul>";
+        errorBox.innerHTML = lista;
+        errorBox.classList.add("show");
+    } else {
+        errorBox.classList.remove("show");
+    }
+});
+</script>
+
+    
+</body>
+</html>
