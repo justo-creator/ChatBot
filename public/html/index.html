@@ -1,179 +1,210 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A simple chatbot interface.">
-    <meta name="keywords" content="chatbot, AI, conversation, web app">
-    <meta name="author" content="Your Name">
-    <meta name="theme-color" content="#4CAF50">
-    <!--icon awesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/public/style/style.css">
-    <title>CHatBot</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ChatBot inteligente y eficiente" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/public/style/style.css" />
+  <title>ChatBot</title>
 </head>
+
 <body>
 
-    <header class="header-container">
-        <a href="/html/index.html" class="logo" title="ChatBot">ChatBot</a>
 
-        <button class="menu-toggle" id="menu-toggle">
-            <span></span>
-    <span></span>
-    <span></span>
-        </button>
-        
+  <header class="header-container">
 
-        <nav class="nav-list" id="nav-list">
-             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#service">Nosotros</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li>  <a href="/public/html/login.html" class="active">Login</a></li>
-               <li> <a href="/public/html/register.html">Register</a></li>
-    
-            </ul> 
+    <span>
+      <img src="/public/img/logo.svg" alt="logo de la empresa" class="logo" />
+    </span>
+    <h1 class="title-header">Stellar</h1>
+    <p class="description-header">
+      <i class="fa-solid fa-robot"></i>
+      haz preguntas y obtén respuestas rápidas y precisas
+    </p>
+  </header>
 
-        </nav>
-        
-    </header>
+  <main class="main-container">
 
-    <article id="home" class="article-container">
-        <section class="hero-section">
-            <h1>Bienvenido a ChatBot</h1>
-    
-            <p>Speed up your research with our chatbot, designed to deliver accurate and relevant answers in seconds. No more wasting time searching through endless sources—just.</p>
-            <a href="/html/login.html" class="btn">Start</a>
-    
-        </section>
-        <section>
-            <img src="/public/img/task.png" alt="imagen de tareas">
-        </section>
-    </article>
-      
+  <nav class="nav-container">
+  <div class="nav-logo">IA Estudio</div>
 
-    <main class="main-container" id="about">
-        
-        <section class="service">
-            <article>
-                <img src="/public/img/productividad.png" alt="imagen de tareas">
-            </article>
-            <article class="service-text">
-                <h2>Productividad</h2>
-              <p>Nuestro chatbot está cuidadosamente diseñado para mejorar significativamente su productividad, brindando respuestas rápidas, precisas y confiables a todas sus preguntas. Ya sea que busque información, resuelva un problema o explore nuevas ideas, nuestro sistema inteligente está aquí para brindarle un apoyo eficiente, ahorrándole tiempo valioso y ayudándole a concentrarse en lo que realmente importa.</p>
-            </article>
-        </section>
+  <button class="nav-toggle" aria-label="Abrir menú">
+    <i class="fa-solid fa-bars"></i>
+  </button>
 
-        <section class="service">
-            <article class="service-text">
-                <h2>Haorra Tiempo en busquedas</h2>
-              <p>Nuestro chatbot está diseñado para ayudarle a ahorrar tiempo valioso, brindándole respuestas instantáneas y precisas a sus preguntas. En lugar de pasar horas buscando información, puede confiar en nuestro sistema inteligente para obtener soluciones rápidas, permitiéndole concentrarse en tareas más importantes y aumentar su productividad general.</p>
-            </article>
-            <section>
-                <img src="/public/img/time.png" alt="imagen de tareas">
-            </section>
-        </section>
-    </main>
+  <ul class="nav-list">
+    <li class="nav-item"><a href="#home" class="nav-link">Inicio</a></li>
+    <li class="nav-item"><a href="#service" class="nav-link">Servicio</a></li>
+    <li class="nav-item"><a href="#help" class="nav-link">Ayuda</a></li>
+    <li class="nav-item"><a href="#about" class="nav-link">Acerca de</a></li>
+    <li class="nav-item"><a href="#contact" class="nav-link">Contacto</a></li>
+  </ul>
+</nav>
 
 
-    <section id="service" class="about-section">
-        <h2 class="section-title">Sobre Nosotros</h2>
-        <p class="section-description">
-          Somos una empresa dedicada a brindar soluciones inteligentes que impulsan el crecimiento personal y empresarial. Nuestro enfoque es simple: innovación, compromiso y excelencia.
+
+    <section class="hero-container" id="home">
+      <div>
+        <h1 class="hero-title">Bienvenido a Stellar</h1>
+        <p class="hero-description">
+          Tu asistente virtual para resolver dudas y mejorar tu aprendizaje.
         </p>
-      
-        <div class="about-grid">
-          <div class="about-card">
-            <div class="icon-container">
-              <i class="fas fa-lightbulb"></i>
-            </div>
-            <h3 class="about-title">Innovación Constante</h3>
-            <p class="about-text">
-              Apostamos por nuevas ideas y tecnologías para ofrecer soluciones que marcan la diferencia.
-            </p>
-          </div>
-      
-          <div class="about-card">
-            <div class="icon-container">
-              <i class="fas fa-user-shield"></i>
-            </div>
-            <h3 class="about-title">Confianza y Seguridad</h3>
-            <p class="about-text">
-              Protegemos tu información y garantizamos un servicio confiable en todo momento.
-            </p>
-          </div>
-      
-          <div class="about-card">
-            <div class="icon-container">
-              <i class="fas fa-rocket"></i>
-            </div>
-            <h3 class="about-title">Crecimiento Rápido</h3>
-            <p class="about-text">
-              Impulsamos tu progreso con herramientas eficaces, pensadas para maximizar resultados.
-            </p>
-          </div>
-      
-          <div class="about-card">
-            <div class="icon-container">
-              <i class="fas fa-heart"></i>
-            </div>
-            <h3 class="about-title">Pasión por Ayudar</h3>
-            <p class="about-text">
-              Nos mueve la pasión de mejorar vidas a través de soluciones accesibles y humanas.
-            </p>
-          </div>
+      </div>
+      <div class="hero-image">
+        <img src="/public/img/logo.svg" alt="Imagen de un asistente virtual" />
+    </section>
+
+ <hr class="line">
+
+    <section class="servicio-container" id="service">
+      <h2 class="servicio-title">Servicios de Nuestra IA para Estudios</h2>
+      <div class="servicio-cards">
+        <div class="servicio-card">
+          <i class="fa-solid fa-brain"></i>
+          <h3>Asistente Inteligente</h3>
+          <p>Responde dudas en tiempo real para facilitar tu aprendizaje.</p>
         </div>
-      </section>
-
-      <footer class="footer" id="contact">
-        <div class="footer-container">
-          <div class="footer-brand">
-            <a href="#" class="footer-logo">ChatBot</a>
-            <p>Conectamos ideas, simplificamos tu mundo. Tu asistente inteligente 24/7.</p>
-          </div>
-      
-          <div class="footer-links">
-            <h4>Enlaces</h4>
-            <ul>
-              <li><a href="#home">Inicio</a></li>
-              <li><a href="#about">Sobre Nosotros</a></li>
-              <li><a href="#service">Servicios</a></li>
-              <li><a href="#contact">Contacto</a></li>
-            </ul>
-          </div>
-      
-          <div class="footer-social">
-            <h4>Redes Sociales</h4>
-            <div class="social-icons">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-          </div>
+        <div class="servicio-card">
+          <i class="fa-solid fa-book-open"></i>
+          <h3>Generación de Resúmenes</h3>
+          <p>Resúmenes claros para repasar rápido los temas clave.</p>
         </div>
-      
-        <div class="footer-bottom">
-          <p>&copy; 2025 ChatBot | Todos los derechos reservados.</p>
+        <div class="servicio-card">
+          <i class="fa-solid fa-calendar-check"></i>
+          <h3>Planificador de Estudio</h3>
+          <p>Organiza tu agenda para estudiar sin estrés ni olvidos.</p>
         </div>
-      </footer>
-      
-
-    
-    <script>
-
-
-      const toggleButton = document.getElementById('menu-toggle');
-    const navList = document.getElementById('nav-list');
-
-    toggleButton.addEventListener('click', () => {
-        navList.classList.toggle('active');
-        toggleButton.classList.toggle('active')
-    });
+        <div class="servicio-card">
+          <i class="fa-solid fa-chart-line"></i>
+          <h3>Seguimiento de Progreso</h3>
+          <p>Visualiza tu avance y mejora tus resultados con datos.</p>
+        </div>
+      </div>
+    </section>
 
 
-    </script>
+    <hr class="line">
+
+
+    <section class="ayuda-container" id="help">
+  <h2 class="ayuda-title">¿Necesitas Ayuda?</h2>
+  <p class="ayuda-subtext">Estamos aquí para apoyarte en todo momento. Usa nuestras herramientas de soporte.</p>
+
+  <div class="ayuda-options">
+    <div class="ayuda-card">
+      <i class="fa-solid fa-headset"></i>
+      <h3>Soporte en Vivo</h3>
+      <p>Chatea con un agente o un asistente IA para resolver tus dudas al instante.</p>
+      <a href="#" class="ayuda-btn">Iniciar Chat</a>
+    </div>
+
+    <div class="ayuda-card">
+      <i class="fa-solid fa-envelope"></i>
+      <h3>Correo de Soporte</h3>
+      <p>Escríbenos a <strong>soporte@iaestudio.com</strong> y responderemos en menos de 24h.</p>
+      <a href="mailto:soporte@iaestudio.com" class="ayuda-btn">Enviar Correo</a>
+    </div>
+
+    <div class="ayuda-card">
+      <i class="fa-solid fa-question-circle"></i>
+      <h3>Preguntas Frecuentes</h3>
+      <p>Consulta respuestas inmediatas sobre el uso de nuestra plataforma.</p>
+      <a href="#faq" class="ayuda-btn">Ver FAQ</a>
+    </div>
+  </div>
+</section>
+
+
+<hr class="line">
+
+
+<section class="nosotros-container" id="about">
+  <div class="nosotros-content">
+    <h2 class="nosotros-title">Acerca de Nosotros</h2>
+    <p class="nosotros-text">
+      Somos un equipo apasionado por la educación y la tecnología. Nuestra misión es crear una IA que acompañe a estudiantes en su proceso de aprendizaje, facilitando el acceso al conocimiento de forma personalizada, rápida y eficiente.
+    </p>
+    <p class="nosotros-text">
+      Nuestra plataforma combina inteligencia artificial avanzada con una interfaz amigable para ayudarte a resolver dudas, generar contenido, practicar ejercicios y mucho más.
+    </p>
+    <a href="#servicios" class="nosotros-btn">Conoce nuestros servicios</a>
+  </div>
+
+  <div class="nosotros-image">
+    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712030.png" alt="Robot IA educativo" />
+  </div>
+</section>
+
+  </main>
+
+
+
+
+
+  <footer class="footer-container" id="contact">
+  <div class="footer-grid">
+    <!-- Logo y descripción -->
+    <div class="footer-logo">
+      <h3>IA Estudio</h3>
+      <p>Potencia tu aprendizaje con inteligencia artificial diseñada para acompañarte en cada paso.</p>
+    </div>
+
+    <!-- Navegación rápida -->
+    <div class="footer-links">
+      <h4>Explorar</h4>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#ayuda">Ayuda</a></li>
+        <li><a href="#acerca">Acerca de</a></li>
+      </ul>
+    </div>
+
+    <!-- Contacto -->
+    <div class="footer-contact">
+      <h4>Contacto</h4>
+      <p><i class="fa-solid fa-envelope"></i> soporte@iaestudio.com</p>
+      <p><i class="fa-solid fa-phone"></i> +34 600 123 456</p>
+      <p><i class="fa-solid fa-location-dot"></i> Independencia, Republica Dominicana</p>
+    </div>
+
+    <!-- Redes sociales -->
+    <div class="footer-social">
+      <h4>Síguenos</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 IA Estudio — Todos los derechos reservados | Desarrollado por Justo</p>
+  </div>
+</footer>
+
+
+
+ <script>
+  const toggleBtn = document.querySelector('.nav-toggle');
+  const navList = document.querySelector('.nav-list');
+
+  toggleBtn.addEventListener('click', () => {
+    navList.classList.toggle('active');
+  });
+
+  // Dark mode toggle (opcional)
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if (prefersDark) {
+    document.body.classList.add('dark-mode');
+  }
+</script>
+
 </body>
+
 </html>
