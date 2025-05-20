@@ -7,6 +7,7 @@
   <meta name="description" content="ChatBot inteligente y eficiente" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="/public/style/style.css" />
   <title>ChatBot</title>
 </head>
@@ -14,7 +15,7 @@
 <body>
 
 
-  <header class="header-container">
+  <header class="header-container" data-aos="fade-left">
 
     <span>
       <img src="/public/img/logo.svg" alt="logo de la empresa" class="logo" />
@@ -46,20 +47,24 @@
 
 
 
-    <section class="hero-container" id="home">
+    <section class="hero-container" id="home" data-aos="fade-right">
       <div>
         <h1 class="hero-title">Bienvenido a Stellar</h1>
         <p class="hero-description">
           Tu asistente virtual para resolver dudas y mejorar tu aprendizaje.
         </p>
       </div>
-      <div class="hero-image">
-        <img src="/public/img/logo.svg" alt="Imagen de un asistente virtual" />
+
+      <div class="hero-acount">
+ <a href="/public/html/login.html" class="btn account-btn">Iniciar sesión</a>
+  <a href="/public/html/register.html" class="btn account-btn secondary">Crear cuenta</a>
+       </div>
+
     </section>
 
  <hr class="line">
 
-    <section class="servicio-container" id="service">
+    <section class="servicio-container" id="service" data-aos="fade-up">
       <h2 class="servicio-title">Servicios de Nuestra IA para Estudios</h2>
       <div class="servicio-cards">
         <div class="servicio-card">
@@ -89,7 +94,7 @@
     <hr class="line">
 
 
-    <section class="ayuda-container" id="help">
+    <section class="ayuda-container" id="help" data-aos="fade-up">
   <h2 class="ayuda-title">¿Necesitas Ayuda?</h2>
   <p class="ayuda-subtext">Estamos aquí para apoyarte en todo momento. Usa nuestras herramientas de soporte.</p>
 
@@ -121,22 +126,41 @@
 <hr class="line">
 
 
-<section class="nosotros-container" id="about">
-  <div class="nosotros-content">
-    <h2 class="nosotros-title">Acerca de Nosotros</h2>
-    <p class="nosotros-text">
-      Somos un equipo apasionado por la educación y la tecnología. Nuestra misión es crear una IA que acompañe a estudiantes en su proceso de aprendizaje, facilitando el acceso al conocimiento de forma personalizada, rápida y eficiente.
+<section class="about-tech" id="about">
+  <div class="about-tech-wrapper" data-aos="fade-up">
+    <h2 class="about-tech-title">Acerca de Nosotros</h2>
+    <p class="about-tech-intro">
+      En <strong>IA Estudio</strong>, combinamos educación e inteligencia artificial para brindar a los estudiantes una experiencia de aprendizaje personalizada, rápida y eficaz.
     </p>
-    <p class="nosotros-text">
-      Nuestra plataforma combina inteligencia artificial avanzada con una interfaz amigable para ayudarte a resolver dudas, generar contenido, practicar ejercicios y mucho más.
-    </p>
-    <a href="#servicios" class="nosotros-btn">Conoce nuestros servicios</a>
-  </div>
 
-  <div class="nosotros-image">
-    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712030.png" alt="Robot IA educativo" />
+    <div class="about-tech-features">
+      <div class="tech-item">
+        <i class="fa-solid fa-microchip"></i>
+        <h4>IA Adaptativa</h4>
+        <p>Utilizamos algoritmos inteligentes que entienden tu nivel y se ajustan a tu ritmo de aprendizaje.</p>
+      </div>
+
+      <div class="tech-item">
+        <i class="fa-solid fa-brain"></i>
+        <h4>Aprendizaje Eficiente</h4>
+        <p>Resuelve dudas complejas en segundos con explicaciones claras y personalizadas.</p>
+      </div>
+
+      <div class="tech-item">
+        <i class="fa-solid fa-lock"></i>
+        <h4>Privacidad y Seguridad</h4>
+        <p>Protegemos tus datos y respetamos tu privacidad para que aprendas con confianza.</p>
+      </div>
+
+      <div class="tech-item">
+        <i class="fa-solid fa-rocket"></i>
+        <h4>Innovación Constante</h4>
+        <p>Estamos en evolución constante para ofrecerte las mejores herramientas educativas con IA.</p>
+      </div>
+    </div>
   </div>
 </section>
+
 
   </main>
 
@@ -144,7 +168,7 @@
 
 
 
-  <footer class="footer-container" id="contact">
+  <footer class="footer-container" id="contact" data-aos="fade-up">
   <div class="footer-grid">
     <!-- Logo y descripción -->
     <div class="footer-logo">
@@ -204,6 +228,16 @@
     document.body.classList.add('dark-mode');
   }
 </script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,     // duración de las animaciones (ms)
+    once: true,         // solo anima una vez
+    easing: 'ease-out', // estilo de entrada
+  });
+</script>
+
 
 </body>
 
